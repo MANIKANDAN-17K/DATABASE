@@ -1,0 +1,52 @@
+  
+CREATE TABLE BOOKS(
+  	bookId number(10),
+    title varchar2(50),
+    ISBN varchar2(50),
+    publisher varchar2(50),
+    publicationyear date,
+    categoryid number(10),
+    authored varchar2(15),
+    copiesavailable number(11)
+);
+
+create table members(
+    memberID number(10),
+    firstname varchar2(20),
+    lastname varchar2(20),
+    email varchar2(50),
+	phonenumber number(10),
+    address varchar2(50),
+    membershipdate date
+);
+
+create table loans(
+    loanid number(10),
+    bookid number(10),
+    loandate date,
+    dudate date,
+    returndate date,
+    librarinaid number(10)
+);
+
+create table authors(
+    authorid number(10),
+    firstname varchar2(20),
+    lastname varchar2(20),
+    birthdate date,
+    nationality varchar2(10)
+);
+
+create table categories(
+    categoryid number(10),
+    categoryname varchar2(25)
+);
+
+create table librarians(
+    librariansid number(10),
+    firstname varchar2(20),
+    lastname varchar2(20),
+    email varchar2(50),
+    phoneno number(10),
+    employmentdate date
+);
