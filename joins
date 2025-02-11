@@ -1,0 +1,37 @@
+create table course(
+  courseId int primary key,
+  coursName varchar2(10),
+  courseFees int
+);
+insert into course values(10,'rocle',3500);
+insert into course values(20,'mysql',4000);
+insert into course values(30,'sqlserver',4500);
+insert into course values(40,'rocle',3500);
+insert into course values(50,'mysql',4000);
+insert into course values(60,'sqlserver',4500);
+
+create table student(
+  studentID int Primary Key,
+  studentName varchar2(15),
+  courseId int
+);
+insert into student values(100,'ade',10);
+insert into student values(200,'smith',20);
+insert into student values(300,'varner',30);
+insert into student values(400,'sara',70);
+insert into student values(500,'pam',80);
+
+select * from student;
+select * from course;
+
+
+select * from student s, course c where s.courseId=c.courseId;
+select * from student s, course c where s.courseId=c.courseId and c.courseId=20;
+
+select * from student s INNER JOIN course c ON  s.courseId = c.courseId;
+
+select * from student s left outer join course c on s.courseId = c.courseId;
+select * from student s right outer join course c on s.courseId = c.courseId;
+select * from student s full outer join course c on s.courseId = c.courseId;
+
+select * from student s join course c ON s.courseId > c.courseId;
