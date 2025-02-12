@@ -1,0 +1,52 @@
+create table Courses(
+  courseId number(10),
+  courseName varchar2(25),
+  discription varchar2(50),
+  startdate date,
+  enddate date,
+  instructorid number(10)
+);
+
+create table Instructors(
+  instructorid number(10),
+  firstname varchar2(20),
+  lastname varchar2(12),
+  email varchar2(50),
+  phonenumber number(10),
+  department varchar2(10)
+);
+
+create table students(
+  studentID number(10),
+  firstname varchar2(20),
+  lastname varchar2(10),
+  email varchar2(50),
+  phonenumber number(10),
+  enrollmentdate date
+);
+
+create table enrollment(
+  enrollmentid number(10),
+  studentid number(10),
+  coursed varchar2(20),
+  enrollmentdate date,
+  status varchar2(10)
+);
+
+create table assignments(
+  assignmentid number(10),
+  coursed varchar2(20),
+  title varchar2(30),
+  description varchar2(20),
+  duedate date
+);
+
+create table grades(
+  gradeid number(10),
+  enrollmentid number(10),
+  assignmentid number(10),
+  grade char(2),
+  comments varchar2(50)
+);
+
+select * from User_tables;
